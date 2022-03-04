@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_padrao">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageTimeCasa"
+            android:layout_width="@dimen/tamanho_imagemTime"
+            android:layout_height="@dimen/tamanho_imagemTime"
+            android:layout_marginStart="@dimen/margin_padrao"
+            android:layout_marginTop="@dimen/margin_padrao"
+            android:contentDescription="@string/imagem_time_da_casa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/nomeTimeCasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageTimeCasa"
+            app:layout_constraintStart_toStartOf="@+id/imageTimeCasa"
+            app:layout_constraintTop_toBottomOf="@+id/imageTimeCasa"
+            tools:text="Time da casa" />
+
+        <TextView
+            android:id="@+id/placarTimeCasa"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="@dimen/margin_padrao"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/imageTimeCasa"
+            app:layout_constraintStart_toEndOf="@+id/imageTimeCasa"
+            app:layout_constraintTop_toTopOf="@+id/imageTimeCasa"
+            tools:text="5" />
+
+        <TextView
+            android:id="@+id/versus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/imageTimeCasa"
+            app:layout_constraintEnd_toStartOf="@+id/imageTimeVisitante"
+            app:layout_constraintStart_toEndOf="@+id/imageTimeCasa"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.555"
+            tools:text="X" />
+
+        <ImageView
+            android:id="@+id/imageTimeVisitante"
+            android:layout_width="@dimen/tamanho_imagemTime"
+            android:layout_height="@dimen/tamanho_imagemTime"
+            android:layout_marginTop="@dimen/margin_padrao"
+            android:layout_marginEnd="@dimen/margin_padrao"
+            android:contentDescription="@string/imagem_time_visitante"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/nomeTimeVisitant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageTimeVisitante"
+            app:layout_constraintHorizontal_bias="0.675"
+            app:layout_constraintStart_toStartOf="@+id/imageTimeVisitante"
+            app:layout_constraintTop_toBottomOf="@+id/imageTimeVisitante"
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="Time visitante" />
+
+        <TextView
+            android:id="@+id/placarTimeVisitante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/imageTimeVisitante"
+            app:layout_constraintEnd_toStartOf="@+id/imageTimeVisitante"
+            app:layout_constraintTop_toTopOf="@+id/imageTimeVisitante"
+            app:layout_constraintVertical_bias="0.495"
+            tools:text="4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
